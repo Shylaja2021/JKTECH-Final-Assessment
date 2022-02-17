@@ -13,6 +13,10 @@ void read(struct Admin *ptr)
 {
     FILE *fptr;
     fptr=fopen("student","r");
+    if(fptr==NULL)
+    {
+        printf("\n cant open file\n");
+    }
     int i=0;
     printf("\n===================student details===================\n");
     printf("\n**********************************************************\nID\tName\tCourse\tPercentage\n**********************************************************\n");
@@ -32,6 +36,10 @@ void write(struct Admin *ptr)
 
     int n;
     FILE *fptr;
+    if(fptr==NULL)
+    {
+        printf("\n cant open file\n");
+    }
     fflush(stdin);
     fptr=fopen("student","w");
     printf("Enter the number of students: ");
